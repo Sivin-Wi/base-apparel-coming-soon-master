@@ -24,8 +24,8 @@
 
 ### Links 🔗
 
-- Solution URL: [page]()
-- Live Site URL: [page]()
+- Solution URL: [page](https://www.frontendmentor.io/solutions/build-using-grid-lrZ8TNuvzP)
+- Live Site URL: [page](https://sivin-wi.github.io/base-apparel-coming-soon-master/)
 
 ## My process
 
