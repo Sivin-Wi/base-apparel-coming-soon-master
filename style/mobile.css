@@ -1,0 +1,155 @@
+@media only screen and (max-width:375px) {
+
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    :root {
+        --deSaturatedRed: hsl(0, 36%, 70%);
+        --SoftRed: hsl(0, 93%, 68%);
+        --DarkGrayishRed: hsl(0, 6%, 24%);
+        --LinearGradient1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+        --LinearGradient2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+    }
+
+    /* @font-face {
+        font-family: 'Josefin Sans';
+        src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+    } */
+
+    body {
+        font-size: 1rem;
+        background-image: linear-gradient(var(--LinearGradient1));
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        height: 100svh;
+        display: grid;
+        grid-template-columns: minmax(375px, 1fr);
+        grid-template-rows: 85px 270px 1fr;
+        grid-template-areas:
+            "header"
+            "img"
+            "content";
+    }
+
+    header {
+        grid-area: header;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+    }
+
+    header > .logo {
+        margin-left: 25px;
+    }
+
+    .containerOne {
+        width: 100%;
+        grid-area: img;
+        height: 100%;
+        background-image: url("../images/hero-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .containerTwo {
+        height: 475px;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .containerTwo > .subContainer {
+        width: 310px;
+        height: 355px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .containerTwo > .subContainer > .heading > h1 > .headingOne {
+        font-weight: 300;
+        color: var(--deSaturatedRed);
+        letter-spacing: 6px;
+        line-height: 1;
+        font-size: 2rem;
+    }
+
+    .containerTwo > .subContainer > .heading > h1 > .headingTwo {
+        color: var(--DarkGrayishRed);
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: 12px;
+        font-size: 2rem;
+    }
+
+    .containerTwo > .subContainer > .para > p {
+        text-align: center;
+        line-height: 1.5;
+        color: var(--deSaturatedRed);
+        font-size: 0.899rem;
+    }
+
+    .containerTwo > .subContainer > .inputContainer {
+        border: 1px solid var(--deSaturatedRed);
+        width: 300px;
+        height: 45px;
+        display: grid;
+        grid-auto-flow: column dense;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 25px;
+    }
+
+    input[type="email"] {
+        width: 208px;
+        height: 40px;
+        font-size: 1rem;
+        text-indent: 20px;
+        border: none;
+        border-radius: 25px;
+        color: var(--deSaturatedRed);
+        outline: none;
+        background-color: var(--LinearGradient1);
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .error {
+        visibility: hidden;
+        /* error js */
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .button {
+        width: 63px;
+        height: 43px;
+        text-align: center;
+        border-radius: 25px;
+        background-color: var(--SoftRed);
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .button > img {
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+
+
+
+
+
+
+
+}

@@ -1,0 +1,178 @@
+@media only screen and (min-width:1440px) {
+
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    :root {
+        --DarkGrayishRed: hsl(0, 6%, 24%);
+        --deSaturatedRed: hsl(0, 36%, 70%);
+        --softRed: hsl(0, 93%, 68%);
+        --linear1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+        --linear2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .attribution {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    main {
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: minmax(1000px, 1fr) minmax(680px, 1fr);
+        grid-template-rows: 120px minmax(620px, 1fr) 150px;
+        grid-template-areas:
+            "header  Img"
+            "textArea Img"
+            "   .    Img";
+    }
+
+
+    header {
+        width: 100%;
+        height: 100%;
+        grid-area: header;
+    }
+
+    header > .logo {
+        margin-top: 32px;
+        margin-left: 200px;
+    }
+
+    .containerOne {
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/hero-desktop.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: Img;
+    }
+
+    .containerTwo {
+        width: 100%;
+        height: 100%;
+        grid-area: textArea;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .containerTwo > .subContainer {
+        height: 500px;
+        width: 570px;
+        display: grid;
+        align-content: space-evenly;
+        position: relative;
+    }
+
+    .containerTwo > .subContainer > .errorPara {
+        color: var(--softRed);
+        position: absolute;
+        bottom: 18px;
+        left: 28px;
+        font-size: 0.85rem;
+        display: none;
+    }
+
+    .containerTwo > .subContainer > .heading > h1 > .headingOne {
+        font-weight: 300;
+        color: var(--deSaturatedRed);
+        letter-spacing: 10px;
+        font-size: 3rem;
+    }
+
+    .containerTwo > .subContainer > .heading > h1 > .headingTwo {
+        font-weight: 600;
+        color: var(--DarkGrayishRed);
+        letter-spacing: 10px;
+        font-size: 3rem;
+    }
+
+    .containerTwo > .subContainer > .para > p {
+        line-height: 1.4;
+        font-weight: 300;
+        color: var(--deSaturatedRed);
+    }
+
+    .containerTwo > .subContainer > .inputContainer {
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-auto-flow: column;
+        border-radius: 25px;
+        background-image: linear-gradient(var(--linear1));
+        /* border: 1px solid var(--softRed);    */
+        /* js  error color */
+        border: 1px solid var(--deSaturatedRed);
+    }
+
+    .containerTwo > .subContainer > .inputContainer > form > .inputBox {
+        display: inline-block;
+        height: 100%;
+        width: 430px;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        height: 100%;
+        text-indent: 30px;
+        font-size: 1.1rem;
+        color: var(--deSaturatedRed);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        outline: none;
+        border: none;
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .error {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        /* err - js */
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .error > img {
+        margin-top: 21px;
+    }
+
+
+    .containerTwo > .subContainer > .inputContainer > .button {
+        display: inline-block;
+        background-color: var(--softRed);
+        width: 100px;
+        height: 100%;
+        justify-self: end;
+        border-radius: 30px;
+        transform: scale(1.04, 1.1);
+    }
+
+    .containerTwo > .subContainer > .inputContainer > .button > img {
+        margin-top: 20px;
+        margin-left: 45px;
+    }
+
+
+
+
+
+}
